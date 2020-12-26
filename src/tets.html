@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = {
+        name: 'it',
+        protocol: 'https',
+        maxStudentCount: 10,
+        isOnline: true,
+        students: ['ivan', 'andrey', 'farid'],
+        classroom: {
+            teatcher: {
+                name: 'wew',
+                age: 18
+            }
+        }
+    };
+
+    let b = {...a};
+    b.classroom = {...a.classroom};
+    b.classroom.teatcher = {...a.classroom.teatcher};
+    b.students = [...a.students];
+
+    b.classroom.teatcher.name = 'mikle'
+    console.log(a)
+</script>
+</body>
+</html>
